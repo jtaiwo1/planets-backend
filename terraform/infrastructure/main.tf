@@ -8,7 +8,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name = "rg-tfstate-planetary-app"
-    storage_account_name = "stplanetses"
+    storage_account_name = "stplanetsjt"
     container_name = "tfstate"
     key = "prod/infrastrucutre/backend-state.tfstate"
   }
