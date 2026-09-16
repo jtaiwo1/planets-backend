@@ -5,6 +5,10 @@ pipeline {
         IMAGE_NAME_DB  = 'jtaiwo1/planets-db-cloud'
         IMAGE_NAME_MVC = 'jtaiwo1/planets-mvc-cloud'
         IMAGE_TAG      = "${BUILD_NUMBER}"
+        ARM_CLIENT_ID       = credentials('azure-client-id')
+        ARM_CLIENT_SECRET   = credentials('azure-client-secret')
+        ARM_SUBSCRIPTION_ID = credentials('azure-subscription-id')
+        ARM_TENANT_ID       = credentials('azure-tenant-id')
     }
 
     stages {
