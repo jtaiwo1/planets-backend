@@ -1,0 +1,26 @@
+services:
+  planets-mvc:
+    image: jtaiwo1/planets-mvc-cloud:latest
+    build:
+      context: ./server
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:
+      - planets-db
+    networks:
+      - planets-network
+
+  # The value of 'DB_HOST' we reference in the MVC Dockerfile
+  planets-db:
+    image: jtaiwo1/planets-db-cloud:latest
+    build:
+      context: ./db
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - planets-network
+
+networks:
+  planets-network:

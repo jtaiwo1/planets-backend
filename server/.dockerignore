@@ -1,0 +1,17 @@
+.git
+.gitignore
+.github
+
+node_modules
+**/node_modules
+
+.env
+
+terraform/.terraform
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfplan
+
+README.md
+.DS_Store
+.vscode
