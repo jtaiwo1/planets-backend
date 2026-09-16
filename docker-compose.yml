@@ -1,6 +1,6 @@
 services:
   planets-mvc:
-    image: jtaiwo1/planets-mvc-cloud:latest
+    image: jtaiwo1/planets-mvc:latest
     build:
       context: ./server
     ports:
@@ -13,7 +13,7 @@ services:
 
   # The value of 'DB_HOST' we reference in the MVC Dockerfile
   planets-db:
-    image: jtaiwo1/planets-db-cloud:latest
+    image: jtaiwo1/planets-db:latest
     build:
       context: ./db
     ports:
